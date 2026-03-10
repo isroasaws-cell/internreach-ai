@@ -1,0 +1,14 @@
+﻿.env
+token.json
+credentials.json
+__pycache__/
+*.pyc
+venv/
+data/vector_store/
+data/*.pdf
+data/*.docx
+data/*.xlsx
+data/*.csv
+exports/
+*.db
+.DS_Store

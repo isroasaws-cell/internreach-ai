@@ -1,0 +1,22 @@
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.7
+  max_tokens: 800
+
+rag:
+  embedding_model: sentence-transformers/all-mpnet-base-v2
+  chunk_size: 400
+  chunk_overlap: 60
+  retrieval_k: 3
+  vector_store: faiss
+
+email:
+  sender: ashish171200@gmail.com
+  delay_between_sends: 45
+  daily_limit: 50
+
+followup:
+  wait_days: 15
+  max_followups_per_hr: 1
+  check_interval_hours: 24
