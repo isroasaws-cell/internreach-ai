@@ -2,6 +2,7 @@ from sqlalchemy import Column, Integer, String, DateTime, Text, Float, ForeignKe
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from datetime import datetime
+import os
 
 Base = declarative_base()
 
@@ -42,7 +43,6 @@ class FollowUp(Base):
     gmail_msg_id = Column(String(100))
     sent_at      = Column(DateTime, default=datetime.utcnow)
 
-import os
 DATABASE_URL = "sqlite:////tmp/outreach.db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
