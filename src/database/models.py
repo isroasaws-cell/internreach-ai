@@ -43,7 +43,7 @@ class FollowUp(Base):
     sent_at      = Column(DateTime, default=datetime.utcnow)
 
 import os
-DATABASE_URL = "sqlite:////tmp/outreach.db" if os.environ.get("STREAMLIT_CLOUD") else "sqlite:///src/database/outreach.db"
+DATABASE_URL = "sqlite:////tmp/outreach.db"
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(bind=engine)
 
