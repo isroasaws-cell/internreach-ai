@@ -359,8 +359,7 @@ elif page == "Run Campaign":
                     <span style="color:#aaa;">({i+1}/{len(hrs)})</span>
                 </div>
                 """, unsafe_allow_html=True)
-
-                email = generate_email(hr)
+                email = generate_email(hr, extra_instruction=f"IMPORTANT: Sign this email as '{USER_NAME}' only. Best regards must say '{USER_NAME}'.")
                 results.append({
                     "Company": hr["company"],
                     "HR Name": hr["hr_name"],
